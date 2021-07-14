@@ -1,0 +1,21 @@
+.pointer {
+    cursor: pointer;
+  }
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+#icon {
+  float: right;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-top: 5px;
+  color: blue;
+}
+ button {
+  float: right;
+ }
