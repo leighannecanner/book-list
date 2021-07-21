@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 
-import 'bootstrap/js/dist/collapse';
+// import 'bootstrap/js/dist/collapse';
 
 import firebase from '../firebase/firebase';
 

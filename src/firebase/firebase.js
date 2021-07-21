@@ -1,9 +1,6 @@
 import firebase from "firebase"
 import "firebase/firestore";
-<<<<<<< HEAD
 import "firebase/auth";
-=======
->>>>>>> 0592c7dbf50a4da7aeb0fad51b3d4b07acc1c037
 
 
 firebase.initializeApp ({

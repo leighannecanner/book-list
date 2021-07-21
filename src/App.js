@@ -9,61 +9,44 @@ import Register from './components/Register';
 import Navbar from './components/Navbar';
 import BookList2 from './components/BookList2';
 
-import 'bootstrap/js/dist/collapse';
+// import 'bootstrap/js/dist/collapse';
 
-import firebase from './firebase/firebase';
 
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
-<<<<<<< HEAD
-=======
-import AddBook from './components/AddBook';
-import BookList from './components/BookList';
+// import AddBook from './components/AddBook';
+// import BookList from './components/BookList';
 import Book from './models/Book';
->>>>>>> 0592c7dbf50a4da7aeb0fad51b3d4b07acc1c037
 
 
 
 
-<<<<<<< HEAD
 class App extends Component{
   
   constructor(props) {
     super(props);
+
+    this.db=firebase.firestore();
 
     this.auth = firebase.auth(); // maybe need ()
 
     this.state= {
       user: null,
       loading: true,
+      books: []
     };
   }
 
-  componentDidMount(){
+
+  
+  async componentDidMount(){
+    this.fetchBooks();
     this.auth.onAuthStateChanged((user) => {
       this.setState({ user: user, loading: false});
     })
-  }
-
-=======
-    this.db=firebase.firestore();
-    // this.db.collection("books").get().then((data)=> console.log(data))
-
-    // let booksString = localStorage.getItem('books');
-    // booksString = booksString ? booksString : '[]' ;
-    // const books = JSON.parse(booksString)
-
-    // this.state = {books: books};
-
-    this.state={
-      books: []
-    };  
-  }
-  async componentDidMount(){
-    this.fetchBooks();
   }
 
   async fetchBooks(){
@@ -109,7 +92,6 @@ class App extends Component{
     this.saveBooksState(updatedBookArr);
   }
   
->>>>>>> 0592c7dbf50a4da7aeb0fad51b3d4b07acc1c037
 
 
 
